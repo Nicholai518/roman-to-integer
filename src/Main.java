@@ -40,10 +40,11 @@ public class Main {
         // test D
         System.out.println("D(500): " + solution("D"));
 
-
         //space
         System.out.println();
 
+        // test M
+        System.out.println("M(1000): " + solution("M"));
         }
 
 
@@ -161,15 +162,15 @@ public class Main {
                     accumulator += 500;
                     break;
 
+                // M has no special cases
                 case 'M':
-                    // code block
+                    accumulator +=1000;
                     break;
 
+                    // default case, just add zero
                 default:
-                    // code block
+                    accumulator +=0;
             } // end of switch
-
-
 
         } // end of for loop
 
