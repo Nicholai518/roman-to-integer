@@ -37,6 +37,13 @@ public class Main {
         //space
         System.out.println();
 
+        // test D
+        System.out.println("D(500): " + solution("D"));
+
+
+        //space
+        System.out.println();
+
         }
 
 
@@ -149,9 +156,9 @@ public class Main {
 
 
 
-
+                // D has no special cases
                 case 'D':
-                    // code block
+                    accumulator += 500;
                     break;
 
                 case 'M':
