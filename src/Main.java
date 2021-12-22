@@ -20,6 +20,17 @@ public class Main {
         System.out.println("XL(40): " + solution("XL"));
         System.out.println("XC(90): " + solution("XC"));
 
+        //space
+        System.out.println();
+
+        // test L
+        System.out.println("L(50): " + solution("L"));
+
+        //space
+        System.out.println();
+
+
+
         }
 
 
@@ -103,10 +114,9 @@ public class Main {
 
 
 
-
-
+                // L has no special cases
                 case 'L':
-                    // code block
+                    accumulator +=50;
                     break;
 
                 case 'C':
