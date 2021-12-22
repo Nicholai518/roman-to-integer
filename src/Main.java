@@ -96,15 +96,10 @@ public class Main {
 
                     break;
 
-
-
                 // V has no special cases
                 case 'V':
                     accumulator +=5;
                     break;
-
-
-
 
                 case 'X':
 
@@ -126,15 +121,10 @@ public class Main {
 
                     break;
 
-
-
                 // L has no special cases
                 case 'L':
                     accumulator +=50;
                     break;
-
-
-
 
                 case 'C':
                     // 400
@@ -153,9 +143,6 @@ public class Main {
                         accumulator +=100;
                     }
                     break;
-
-
-
 
                 // D has no special cases
                 case 'D':
