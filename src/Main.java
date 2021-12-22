@@ -1,10 +1,24 @@
 public class Main {
 
     public static void main(String[] args) {
-	// test I
+	    // test I
         System.out.println("I(1): " + solution("I"));
         System.out.println("IV(4): " + solution("IV"));
         System.out.println("IX(9): " + solution("IX"));
+
+        //space
+        System.out.println();
+
+        // test V
+        System.out.println("V(5): " + solution("V"));
+
+
+
+
+        // test X
+//        System.out.println("X(10): " + solution("X"));
+//        System.out.println("XL(50): " + solution("XL"));
+//        System.out.println("XC(90): " + solution("XC"));
 
         }
 
@@ -36,23 +50,119 @@ public class Main {
         // iteratorate through the String
         for(int i = 0; i<s.length(); i++){
 
-            // I character
-            // 4
-            if(s.charAt(i) == 'I' && ((i+1 < s.length()) && s.charAt(i+1) == 'V')){
-                accumulator +=4;
-                i++; // need to increment i to skip over additional character
-            }
-            // 9
-            else if(s.charAt(i) == 'I' && ( (i+1 < s.length()) && s.charAt(i+1) == 'X')){
-                accumulator +=9;
-                i++; // need to increment i to skip over additional character
-            }
-            // normal case, just add 1
-            else{
-                accumulator +=1;
-            }
-        }
+            switch(s.charAt(i)) {
+                case 'I':
+                    // 4
+                    if(((i+1 < s.length()) && s.charAt(i+1) == 'V')){
+                        accumulator +=4;
+                        i++; // need to increment i to skip over additional character
+                    }
+
+                    // 9
+                    else if ( (i+1 < s.length()) && s.charAt(i+1) == 'X'){
+                        accumulator +=9;
+                        i++; // need to increment i to skip over additional character
+                    }
+                    // normal case, just add 1
+                    // (s.charAt(i) == 'I' && ( (i+1 < s.length()) && s.charAt(i+1) != 'V' && s.charAt(i+1) != 'X'))
+                    else  {
+                        accumulator +=1;
+                    }
+
+                    break;
+
+                // V has no special cases
+                case 'V':
+                    accumulator +=5;
+                    break;
+
+                case 'X':
+                    // code block
+                    break;
+
+                case 'L':
+                    // code block
+                    break;
+
+                case 'C':
+                    // code block
+                    break;
+
+                case 'D':
+                    // code block
+                    break;
+
+                case 'M':
+                    // code block
+                    break;
+
+                default:
+                    // code block
+            } // end of switch
+
+
+
+        } // end of for loop
 
         return accumulator;
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // I character
+            // 4
+//            if(s.charAt(i) == 'I' && ((i+1 < s.length()) && s.charAt(i+1) == 'V')){
+//                accumulator +=4;
+//                i++; // need to increment i to skip over additional character
+//            }
+//            // 9
+//            else if(s.charAt(i) == 'I' && ( (i+1 < s.length()) && s.charAt(i+1) == 'X')){
+//                accumulator +=9;
+//                i++; // need to increment i to skip over additional character
+//            }
+//            // normal case, just add 1
+//            else if(s.charAt(i) == 'I' && ( (i+1 < s.length()) && s.charAt(i+1) != 'V' && s.charAt(i+1) != 'X')) {
+//                accumulator +=1;
+//            }
+
+//
+//            // X character
+//            // 50
+//            else if(s.charAt(i) == 'X' && ((i+1 < s.length()) && s.charAt(i+1) == 'L')){
+//                accumulator +=50;
+//                i++; // need to increment i to skip over additional character
+//            }
+//            // 90
+//            else if(s.charAt(i) == 'X' && ( (i+1 < s.length()) && s.charAt(i+1) == 'C')){
+//                accumulator +=9;
+//                i++; // need to increment i to skip over additional character
+//            }
+//            // normal case, just add 10
+//            else if (s.charAt(i) == 'X' && ( (i+1 < s.length()) && s.charAt(i+1) != 'L' && s.charAt(i+1) != 'C')){
+//                accumulator +=10;
+//            }
+
+
+
+
+
+
+
