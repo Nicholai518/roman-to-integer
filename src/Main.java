@@ -29,7 +29,13 @@ public class Main {
         //space
         System.out.println();
 
+        // test C
+        System.out.println("C(100): " + solution("C"));
+        System.out.println("CD(400): " + solution("CD"));
+        System.out.println("CM(900): " + solution("CM"));
 
+        //space
+        System.out.println();
 
         }
 
@@ -119,9 +125,30 @@ public class Main {
                     accumulator +=50;
                     break;
 
+
+
+
                 case 'C':
-                    // code block
+                    // 400
+                    if( ((i+1 < s.length()) && s.charAt(i+1) == 'D')){
+                        accumulator +=400;
+                        i++; // need to increment i to skip over additional character
+                    }
+                    // 900
+                    else if(( (i+1 < s.length()) && s.charAt(i+1) == 'M')){
+                        accumulator +=900;
+                        i++; // need to increment i to skip over additional character
+                    }
+                    // normal case, just add 100
+                    // (s.charAt(i) == 'X' && ( (i+1 < s.length()) && s.charAt(i+1) != 'L' && s.charAt(i+1) != 'C'))
+                    else {
+                        accumulator +=100;
+                    }
                     break;
+
+
+
+
 
                 case 'D':
                     // code block
