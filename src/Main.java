@@ -12,13 +12,13 @@ public class Main {
         // test V
         System.out.println("V(5): " + solution("V"));
 
-
-
+        //space
+        System.out.println();
 
         // test X
-//        System.out.println("X(10): " + solution("X"));
-//        System.out.println("XL(50): " + solution("XL"));
-//        System.out.println("XC(90): " + solution("XC"));
+        System.out.println("X(10): " + solution("X"));
+        System.out.println("XL(40): " + solution("XL"));
+        System.out.println("XC(90): " + solution("XC"));
 
         }
 
@@ -71,14 +71,39 @@ public class Main {
 
                     break;
 
+
+
                 // V has no special cases
                 case 'V':
                     accumulator +=5;
                     break;
 
+
+
+
                 case 'X':
-                    // code block
+
+                    // 40
+                    if( ((i+1 < s.length()) && s.charAt(i+1) == 'L')){
+                        accumulator +=40;
+                        i++; // need to increment i to skip over additional character
+                    }
+                    // 90
+                    else if(( (i+1 < s.length()) && s.charAt(i+1) == 'C')){
+                        accumulator +=90;
+                        i++; // need to increment i to skip over additional character
+                    }
+                    // normal case, just add 10
+                    // (s.charAt(i) == 'X' && ( (i+1 < s.length()) && s.charAt(i+1) != 'L' && s.charAt(i+1) != 'C'))
+                    else {
+                        accumulator +=10;
+                    }
+
                     break;
+
+
+
+
 
                 case 'L':
                     // code block
@@ -108,57 +133,6 @@ public class Main {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            // I character
-            // 4
-//            if(s.charAt(i) == 'I' && ((i+1 < s.length()) && s.charAt(i+1) == 'V')){
-//                accumulator +=4;
-//                i++; // need to increment i to skip over additional character
-//            }
-//            // 9
-//            else if(s.charAt(i) == 'I' && ( (i+1 < s.length()) && s.charAt(i+1) == 'X')){
-//                accumulator +=9;
-//                i++; // need to increment i to skip over additional character
-//            }
-//            // normal case, just add 1
-//            else if(s.charAt(i) == 'I' && ( (i+1 < s.length()) && s.charAt(i+1) != 'V' && s.charAt(i+1) != 'X')) {
-//                accumulator +=1;
-//            }
-
-//
-//            // X character
-//            // 50
-//            else if(s.charAt(i) == 'X' && ((i+1 < s.length()) && s.charAt(i+1) == 'L')){
-//                accumulator +=50;
-//                i++; // need to increment i to skip over additional character
-//            }
-//            // 90
-//            else if(s.charAt(i) == 'X' && ( (i+1 < s.length()) && s.charAt(i+1) == 'C')){
-//                accumulator +=9;
-//                i++; // need to increment i to skip over additional character
-//            }
-//            // normal case, just add 10
-//            else if (s.charAt(i) == 'X' && ( (i+1 < s.length()) && s.charAt(i+1) != 'L' && s.charAt(i+1) != 'C')){
-//                accumulator +=10;
-//            }
 
 
 
